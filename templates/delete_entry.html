@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Grades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4">Delete Grade Entries</h1>
+    <a href="/" class="btn btn-secondary mb-3">Back to Dashboard</a>
+
+    {% if grades %}
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Student Name</th>
+          <th>Email</th>
+          <th>Assignment</th>
+          <th>Score</th>
+          <th>Max Score</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for grade in grades %}
+        <tr>
+          <td>{{ grade[0] }}</td>
+          <td>{{ grade[1] }}</td>
+          <td>{{ grade[2] }}</td>
+          <td>{{ grade[3] }}</td>
+          <td>{{ grade[4] }}</td>
+          <td>{{ grade[5] }}</td>
+          <td>
+            <form action="{{ url_for('delete_grade', grade_id=grade[0]) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this entry?');">
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>No grade entries found.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

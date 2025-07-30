@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Add Entry</title>
+</head>
+<body>
+    <section class="bg-light text-center py-5">
+        <div class="container">
+          <h1 class="display-4 fw-bold">Welcome to the <br> <span class="text-primary">Student Dashboard!</span></h1>
+          <p class="lead">Please view below!</p>
+      
+          <!-- Add Entry Form -->
+          <form action="/add" method="POST" class="text-start mx-auto" style="max-width: 600px;">
+            <h4 class="mb-3">Add a New Entry</h4>
+            <div class="mb-3">
+              <label for="name" class="form-label">Student Name</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Student Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="assignment" class="form-label">Assignment Title</label>
+              <input type="text" class="form-control" name="assignment" required>
+            </div>
+            <div class="mb-3">
+              <label for="max_score" class="form-label">Max Score</label>
+              <input type="number" class="form-control" name="max_score" required>
+            </div>
+            <div class="mb-3">
+              <label for="score" class="form-label">Student Score</label>
+              <input type="number" class="form-control" name="score" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Entry</button>
+            <a href ="/" class="btn btn-primary">Back to the Dashboard</a>
+          </form>
+      </section>
+
+      <section class = "text-bg-secondary p-3">
+        <div class = "text-center">
+            Daniel Campbell
+        </div>
+        <div class="text-center">
+            <a href = "www.linkedin.com/in/daniel-campbell-160152115" alt="LinkedIn" class="link-light">LinkedIn</a>
+            <a href = "" alt="Github" class="link-light"> Github</a>
+            <a href = "mailto:danielcampbell1130@gmail.com" alt="Email" class="link-light"> Email me</a>
+        </div>
+        <div class = "text-center">
+            This is built with Bootstap5, SQL, Python, and Flask
+        </div>
+      </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
