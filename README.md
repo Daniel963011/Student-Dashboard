@@ -1,4 +1,4 @@
-# 🧮 Student Performance Dashboard
+# Student Performance Dashboard
 
 A web-based dashboard built with Flask, MySQL, and Pandas that allows you to:
 
